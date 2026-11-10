@@ -10,12 +10,12 @@ Este repositório reúne versões corrigidas e adaptadas do mod original para o 
 
 ## Sobre as versões
 
-Atualmente, este repositório contém dois executáveis independentes:
+Atualmente, este repositório contém dois executáveis independentes, cada um com foco em um modo de uso específico:
 
-| Arquivo | Descrição |
+| Arquivo | Foco e Descrição |
 | :--- | :--- |
-| `Business Tour 2.0.exe` | Versão adaptada para Business Tour 2.0, com leitura da partida, seleção de jogadores e controles de valores/efeitos. |
-| `Business Tour Mod.exe` | Versão modernizada do mod, com controles de bônus/extras e funções relacionadas à partida. |
+| `Business Tour 2.0.exe` | **Focado em Partidas Online:** Versão adaptada para Business Tour 2.0, com leitura da partida em tempo real, seleção de jogadores e controles de valores e efeitos otimizados para o ambiente multiplayer. |
+| `Business Tour Mod.exe` | **Focado em Partidas com Amigos / Privadas:** Versão modernizada do mod, com controles de bônus/extras e funções avançadas para gerenciamento da partida. |
 
 > **Aviso:** As duas aplicações são independentes. **Não execute os dois mods ao mesmo tempo.** A própria aplicação apresenta avisos para fechar outra instância do mod antes de ativar determinados efeitos ou alterar valores.
 
@@ -67,7 +67,7 @@ Os executáveis analisados são aplicativos Windows x64 desenvolvidos em C#/.NET
 
 ## Instalação e uso
 
-1. Baixe o executável desejado na seção **Releases**.
+1. Baixe o executável desejado na seção **Releases** (escolha entre a versão 2.0 para online ou a versão Mod para jogar com amigos).
 2. Abra o Business Tour.
 3. Entre em uma partida/sala e aguarde o carregamento completo.
 4. Execute **somente um** dos executáveis.
@@ -76,7 +76,7 @@ Os executáveis analisados são aplicativos Windows x64 desenvolvidos em C#/.NET
 7. Ative apenas os recursos compatíveis com o turno e com o modo de jogo atual.
 8. Confira o resultado no próprio jogo.
 
-If a partida mudar, o jogo fechar ou o programa perder a conexão, reconecte antes de tentar utilizar os controles novamente.
+Se a partida mudar, o jogo fechar ou o programa perder a conexão, reconecte antes de tentar utilizar os controles novamente.
 
 ---
 
@@ -96,9 +96,9 @@ If a partida mudar, o jogo fechar ou o programa perder a conexão, reconecte ant
 
 ## Avisos e Limitações
 
-* **Partidas Multiplayer / Online:** O mod **funciona em partidas multiplayer**, porém o jogo possui um sistema de leitura e validação de dados em tempo real com o servidor. Modificar valores (como saldo de dinheiro) causa dessincronização entre a memória local injetada e a validação do servidor, o que frequentemente resulta em **desconexão da partida** (às vezes o jogo consegue reconectar e restabelecer o estado anterior, às vezes não).
+* **Partidas Multiplayer / Online:** O mod **funciona em partidas multiplayer**, porém o jogo possui um sistema de leitura e validação de dados em tempo real com o servidor. Modificar valores diretamente (como dinheiro) pode causar dessincronização entre a memória local injetada e o estado no servidor. Isso frequentemente resulta na **desconexão da partida** (às vezes o jogo reconecta e restaura o estado anterior, às vezes não).
 * **Risco de Sanções:** A modificação de dados de memória em ambientes online pode violar os Termos de Serviço do jogo e acarretar sanções ou banimento da conta.
-* **Uso Recomendado:** Utilize preferencialmente em partidas privadas ou salas de teste para evitar perda de progresso por desconexão.
+* **Uso Recomendado:** Utilize preferencialmente a versão `Business Tour Mod.exe` para partidas privadas com amigos e testes, para evitar desconexões por validação de servidor.
 * **Sem Garantias:** Este projeto é fornecido "como está", sem garantias de funcionamento, compatibilidade continuada ou suporte pós-atualização do jogo.
 * **Segurança:** Baixe executáveis somente de fontes confiáveis.
 
