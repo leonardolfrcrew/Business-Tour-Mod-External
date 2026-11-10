@@ -1,102 +1,96 @@
-# Business Tour Mod — Adaptado & Mantido por Olofmaike
+# 🎲 Business Tour 2.0 — Automation Suite
 
-Este repositório contém a versão **totalmente reformulada, adaptada e mantida por Olofmaike**, baseada no projeto original *Business Tour Mod External* de **Nebulea-dev**.
+*Uma aplicação desktop moderna de alta performance projetada para monitoramento e interação em tempo real com o jogo Business Tour.*
 
-O objetivo desta distribuição é corrigir as quebras de memória causadas pelas atualizações do *Business Tour*, estabilizar a leitura de ponteiros e fornecer dois executáveis dedicados e otimizados para cada tipo de partida.
+[Recursos](#-recursos-principais) • [Instalação](#-instalação-e-execução) • [Guia de Uso](#-guia-de-utilização) • [Créditos](#-créditos-e-contribuições)
 
----
+## 📋 Sumário
 
-## 🇧🇷 Português
-
-### Créditos e Autoria
-
-* **Reengenharia, Adaptações de Memory Offsets e Mantenedor do Projeto:** **Olofmaike**
-* **Desenvolvimento da Prova de Conceito Inicial:** **Nebulea-dev**
-
----
-
-### Versões do Mod (Desenvolvidas por Olofmaike)
-
-Não execute os dois aplicativos ao mesmo tempo. Cada um foi projetado para um ambiente específico:
-
-| Executável | Foco Principal | Descrição Técnica |
-| --- | --- | --- |
-| **`Business Tour 2.0.exe`** | **Partidas Online Ranqueadas / Públicas** | Otimizado por **Olofmaike** para rodar em partidas online ao vivo. Possui leitura rápida de estado de memória e controle de saldo/efeitos ajustado para reduzir a taxa de rejeição pelo servidor. |
-| **`Business Tour Mod.exe`** | **Partidas Privadas / Com Amigos** | Versão completa voltada para partidas personalizadas com amigos. Libera o conjunto completo de bônus, edição de dados, relançamentos e manipulação direta do estado da mesa. |
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [Recursos Principais](#-recursos-principais)
+- [Requisitos do Sistema](#-requisitos-do-sistema)
+- [Instalação e Execução](#-instalação-e-execução)
+- [Guia de Utilização](#-guia-de-utilização)
+- [Solução de Problemas](#-solução-de-problemas)
+- [Créditos e Contribuições](#-créditos-e-contribuições)
+- [Isenção de Responsabilidade](#-isenção-de-responsabilidade)
 
 ---
 
-### Recursos Atualizados nesta Build
+## 🛠️ Sobre o Projeto
 
-* **Engine Hooking:** Leitura direta e estável do processo do *Business Tour* (Build `25994541`).
-* **Sincronização da Partida:** Leitura em tempo real dos ponteiros dos jogadores, turnos e dados do tabuleiro.
-* **Gerenciador Financeiro:** Adição e remoção de saldo direto na memória.
-* **Controle de Prisão:** Manipulação direta do contador de turnos de encarceramento.
-* **Manipulador de Dados e Cartas:** Injeção de valores de dados, duplos e cartas de sorte.
+O **Business Tour 2.0** foi totalmente reformulado para atender às versões e builds mais recentes do jogo. Desenvolvido em C# (.NET Framework), o software combina uma interface gráfica intuitiva baseada em MetroUI com um mecanismo robusto de leitura de memória do processo em tempo real.
+
+Diferente de versões legadas, esta release elimina a necessidade de autenticações manuais, realizando a **detecção e sincronização automática do jogador** assim que a partida é iniciada.
 
 ---
 
-### ⚠️ Observação sobre Partidas Online e Multiplayer
+## ✨ Recursos Principais
 
-O mod **funciona em partidas multiplayer**, mas é importante destacar o comportamento do jogo:
-
-* O *Business Tour* faz validações de estado no servidor (*server-side*).
-* Ao alterar valores brutos (como dinheiro) no `Business Tour 2.0.exe` durante uma partida pública, o servidor pode detectar a divergência de pacotes e **desconectar você da partida**. Em alguns casos o jogo reconecta reajustando o saldo; em outros, a sala fecha.
-* Para jogar sem risco de queda por validação de pacotes, utilize o `Business Tour Mod.exe` em **salas privadas** com amigos.
-
----
-
-### Guia Rápido de Uso
-
-1. Abra o *Business Tour* e entre no lobby ou partida.
-2. Abra **apenas um** dos executáveis mantidos por **Olofmaike**.
-3. Clique em **Conectar / Atualizar** para parear com a memória do jogo.
-4. Selecione o jogador na lista e aplique os comandos desejados.
+- 🔍 **Detecção Automática de Sessão:** Sincronização automática com a conta e o estado ativo no jogo.
+- 🎨 **Interface MetroUI (Dark Mode):** Layout moderno, responsivo e limpo para facilitar a navegação durante as partidas.
+- 📊 **Monitor de Eventos em Tempo Real:** Console integrado para acompanhamento detalhado dos logs e status da conexão.
+- ⚡ **Alta Performance:** Baixo consumo de memória RAM e processamento otimizado para não impactar a taxa de quadros (FPS) do jogo.
+- 📦 **Standalone Distribution:** Pronto para uso diretamente no executável sem necessidade de instaladores complexos.
 
 ---
 
-### Integridade dos Executáveis (SHA-256)
+## 💻 Requisitos do Sistema
 
-| Arquivo | Hash SHA-256 |
-| --- | --- |
-| `Business Tour 2.0.exe` | `628b8d3aa30f3bc1853914610fabb109b3c9ab4dd4bde58f27f9ab250dc7f64f` |
-| `Business Tour Mod.exe` | `2d25d1eb25f5466fdcd335dfa3cbd527daf61311005ce1c4a074a72da17f4056` |
-
----
-
----
-
-## 🇺🇸 English
-
-### Attribution & Credits
-
-* **Re-engineering, Offset Fixes & Current Lead Developer:** **Olofmaike**
-* **Original Project Concept:** **Nebulea-dev**
+| Componente | Requisito Mínimo | Requisito Recomendado |
+| :--- | :--- | :--- |
+| **Sistema Operacional** | Windows 10 (64-bit) | Windows 10 / 11 (64-bit) |
+| **Ambiente de Execução** | .NET Framework 4.7.2 | .NET Framework 4.8 |
+| **Privilégios** | Administrador | Administrador |
+| **Arquitetura** | x64 | x64 |
 
 ---
 
-### Executable Builds (Maintained by Olofmaike)
+## 🚀 Instalação e Execução
 
-Do not run both applications simultaneously.
+Como este projeto é disponibilizado em formato pré-compilado (`.exe`), siga os passos abaixo para executá-lo corretamente:
 
-| Executable | Focus | Description |
-| --- | --- | --- |
-| **`Business Tour 2.0.exe`** | **Public / Ranked Online** | Tuned by **Olofmaike** specifically for live online games, featuring low-latency memory reading and network-aware state manipulation. |
-| **`Business Tour Mod.exe`** | **Private / Custom Friends Games** | Unlocks full feature parity, dice controls, bonus manipulation, and card overrides for private rooms. |
+1. **Download do Release:**
+   Baixe o arquivo `.zip` ou `.rar` mais recente da aba [Releases](../../releases) do repositório.
 
----
+2. **Extração dos Arquivos:**
+   Extraia todo o conteúdo do pacote em uma pasta de sua preferência.
 
-### Technical Engine Specs
+   > ⚠️ **Atenção:** Mantenha as DLLs auxiliares (como `MetroFramework.dll`) na mesma pasta do executável `Business Tour 2.0 - Teste.exe`.
 
-* **Target Build:** `Build 25994541` (x64 Windows)
-* **Lead Maintainer:** **Olofmaike**
-* **Base Repository:** `Nebulea-dev/Business-Tour-Mod-External`
+3. **Execução:**
+   Clique com o botão direito sobre o executável `Business Tour 2.0 - Teste.exe` e selecione **Executar como Administrador**.
 
 ---
 
-### SHA-256 Hashes
+## 📖 Guia de Utilização
 
-| File | SHA-256 |
-| --- | --- |
-| `Business Tour 2.0.exe` | `628b8d3aa30f3bc1853914610fabb109b3c9ab4dd4bde58f27f9ab250dc7f64f` |
-| `Business Tour Mod.exe` | `2d25d1eb25f5466fdcd335dfa3cbd527daf61311005ce1c4a074a72da17f4056` |
+1. Abra o jogo **Business Tour** e entre em uma partida.
+2. Inicie o **Business Tour 2.0** com privilégios de administrador.
+3. Aguarde o indicador de status confirmar a vinculação ao processo do jogo.
+4. Utilize o painel para monitorar os parâmetros e logs em tempo real.
+
+---
+
+## ❓ Solução de Problemas
+
+- **O programa fecha sozinho ao abrir:** Certifique-se de ter o **.NET Framework 4.7.2** ou superior instalado.
+- **Falha ao conectar com o jogo:** Verifique se executou o arquivo com privilégios de **Administrador**.
+- **Erro de DLL ausente:** Verifique se extraiu **todos** os arquivos do `.zip` para a mesma pasta. O executável necessita das DLLs no mesmo diretório para inicializar a interface gráfica.
+- **Não detecta o jogador:** Certifique-se de abrir o jogo **antes** de inicializar a ferramenta.
+- **Antivírus bloqueando:** Verifique se o seu antivírus não bloqueou o processo de leitura de memória da aplicação.
+
+---
+
+## 👥 Créditos e Contribuições
+
+Este projeto é um esforço contínuo da comunidade de desenvolvimento:
+
+- 👤 **Nebulea-dev** — Criador e desenvolvedor da primeira versão do projeto (atualmente legada/obsoleta).
+- 👤 **Olofmaike** — Responsável pela manutenção, refatoração completa do código, correção de bugs e atualização do software para suporte total às builds recentes do jogo.
+
+---
+
+## ⚠️ Isenção de Responsabilidade (Disclaimer)
+
+*Este software é disponibilizado estritamente para fins educacionais, demonstrativos e de pesquisa tecnológica. O uso de utilitários de terceiros em ambiente online pode violar os Termos de Serviço (ToS) das plataformas do jogo. Os desenvolvedores e mantenedores não se responsabilizam por eventuais restrições, banimentos ou punições aplicadas às contas dos usuários.*
