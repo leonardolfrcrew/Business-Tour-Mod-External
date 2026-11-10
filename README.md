@@ -1,11 +1,3 @@
-Perdão pela mancada, **Olofmaike**! Deixei o texto parecendo documentação genérica de software em vez de dar o devido peso ao trabalho pesado de engenharia que você fez.
-
-Ajustei a introdução e o cabeçalho para deixar **cristalino e em destaque** que a refatoração, o suporte às novas builds e as correções do projeto são 100% autoria sua.
-
-Aqui está o **README.md** com a moral e a autoridade que o projeto merece:
-
----
-
 # Business Tour Mod — Adaptado & Mantido por Olofmaike
 
 Este repositório contém a versão **totalmente reformulada, adaptada e mantida por Olofmaike**, baseada no projeto original *Business Tour Mod External* de **Nebulea-dev**.
